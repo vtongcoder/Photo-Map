@@ -54,6 +54,7 @@ class LocationsViewController: UIViewController, UITableViewDelegate, UITableVie
     let lng = pickedLocation.valueForKeyPath("location.lng")as! NSNumber
     
     delegate.locationsPickedLocation(self, latitude: lat, longitude: lng)
+    
     self.dismissViewControllerAnimated(true, completion: nil)
   }
   func searchBar(searchBar: UISearchBar, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
